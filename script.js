@@ -18,7 +18,6 @@
 */ 
 
 //Extra Credit feature: Adding a search text box
-
 const searchInput = document.querySelector("#search-animals");
 let activeSearch = "";
 
@@ -26,14 +25,6 @@ searchInput.addEventListener("input", () => {
     activeSearch = searchInput.value;
     updateDisplay();
 });
-
-if (activeSearch) {
-    const searchTerm = activeSearch.toLowerCase();
-    displayedAnimals = displayedAnimals.filter((animal) =>
-        animal.name.toLowerCase().includes(searchTerm)
-    );
-}
-
 
 // ------------------------------------
 // Animal Data
@@ -177,6 +168,13 @@ function updateDisplay() {
 	
 	if (activeFilter === "adopted") {
 		displayedAnimals = displayedAnimals.filter((animal) => animal.adopted);
+	}
+
+	if (activeSearch.trim()) {
+		const searchTerm = activeSearch.trim().toLowerCase();
+		displayedAnimals = displayedAnimals.filter((animal) =>
+			animal.name.toLowerCase().includes(searchTerm)
+		);
 	}
 	
 	// Sorting a copy keeps the original animals array in its original order so the array is not permanently changed,
