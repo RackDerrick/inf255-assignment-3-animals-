@@ -224,7 +224,10 @@ const sortSelect = document.querySelector("#sort-animals");
  * Note: When this TODO is complete, every part of the app should work.
  * Go back and test the filter and sort code you wrote in TODO #3.
  */
-
+allButton.addEventListener("click", () => {
+	activeFilter = "all";
+	updateDisplay();
+});
 // Display the original list and the count when the page first opens.
 displayAnimals(animals);
 updateCount();
