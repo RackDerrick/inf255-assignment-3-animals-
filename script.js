@@ -13,8 +13,27 @@
  * (see README.md). Features that are not listed here will not be graded.
  *
  *   -
- *   -
- */
+ * 
+ * 
+*/ 
+
+//Extra Credit feature: Adding a search text box
+
+const searchInput = document.querySelector("#search-animals");
+let activeSearch = "";
+
+searchInput.addEventListener("input", () => {
+    activeSearch = searchInput.value;
+    updateDisplay();
+});
+
+if (activeSearch) {
+    const searchTerm = activeSearch.toLowerCase();
+    displayedAnimals = displayedAnimals.filter((animal) =>
+        animal.name.toLowerCase().includes(searchTerm)
+    );
+}
+
 
 // ------------------------------------
 // Animal Data
