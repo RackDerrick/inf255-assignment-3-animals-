@@ -26,6 +26,8 @@ searchInput.addEventListener("input", () => {
     updateDisplay();
 });
 
+
+
 // ------------------------------------
 // Animal Data
 // ------------------------------------
