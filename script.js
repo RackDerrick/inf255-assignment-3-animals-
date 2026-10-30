@@ -234,6 +234,11 @@ availableButton.addEventListener("click", () => {
 	updateDisplay();
 }); 
 
+adoptedButton.addEventListener("click", () => {
+	activeFilter = "adopted";
+	updateDisplay();
+});
+
 // Display the original list and the count when the page first opens.
 displayAnimals(animals);
 updateCount();
