@@ -228,6 +228,12 @@ allButton.addEventListener("click", () => {
 	activeFilter = "all";
 	updateDisplay();
 });
+
+availableButton.addEventListener("click", () => {
+	activeFilter = "available";
+	updateDisplay();
+}); 
+
 // Display the original list and the count when the page first opens.
 displayAnimals(animals);
 updateCount();
