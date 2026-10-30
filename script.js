@@ -239,6 +239,11 @@ adoptedButton.addEventListener("click", () => {
 	updateDisplay();
 });
 
+sortSelect.addEventListener("change", () => {
+	activeSort = sortSelect.value;
+	updateDisplay();
+});
+
 // Display the original list and the count when the page first opens.
 displayAnimals(animals);
 updateCount();
